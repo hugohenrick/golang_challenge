@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package coin;
+
+option go_package = "github.com/hugohenrick/golang_challenge/coin/proto";
+
+import "google/protobuf/empty.proto";
+
+message Coin {
+    string id = 1;
+    string initials = 2;
+    string name = 3;
+    int32 votes = 4;
+}
+
+message CoinId {
+    string id = 1;
+}
+
+service CoinService {
+    rpc CreateCoin (Coin) returns (CoinId);
+    rpc ReadCoin (CoinId) returns (Coin);
+    rpc UpdateCoin (Coin) returns (google.protobuf.Empty);
+    rpc DeleteCoin (CoinId) returns (google.protobuf.Empty);
+    rpc ListCoins (google.protobuf.Empty) returns (stream Coin);
+}
