@@ -14,14 +14,12 @@
 ```shell
 make all
 ```
-***all is a Makefile rule** - check the other [rules](#makefile)
 
 #### `Windows - Chocolatey`
 ```shell
 choco install make
 make all
 ```
-***all is a Makefile rule** - check the other [rules](#makefile)
 
 #### `Windows - Without Chocolatey`
 
