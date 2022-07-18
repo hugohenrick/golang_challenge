@@ -27,6 +27,8 @@ make all
 
 protoc -Icoin/proto --go_opt=module=github.com/hugohenrick/golang_challenge --go_out=. --go-grpc_opt=module=github.com/hugohenrick/golang_challenge --go-grpc_out=. coin/proto/*.proto
 
+Start MongoDB:
+acces folder coin and run: docker compose up
 go build -o bin/coin/server.exe ./coin/server
 go build -o bin/coin/client.exe ./coin/client
 ```
