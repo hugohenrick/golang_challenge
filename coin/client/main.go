@@ -21,12 +21,12 @@ func main() {
 	defer conn.Close()
 	c := pb.NewCoinServiceClient(conn)
 
-	CreateCoin(c)
-	//id := CreateCoin(c)
-	//readCoin(c, id) //Valid
-	//readCoin(c, "aNomExistingId") //Invalid
-	//updateCoin(c, id)
-	//listCoin(c)
+	id := CreateCoin(c)
+	readCoin(c, id)               //Valid
+	readCoin(c, "aNomExistingId") //Invalid
+	updateCoin(c, id)
+	listCoin(c)
 	//deleteCoin(c, id)
+	upVoteCoin(c, id)
 
 }
