@@ -23,4 +23,5 @@ service CoinService {
     rpc UpdateCoin (Coin) returns (google.protobuf.Empty);
     rpc DeleteCoin (CoinId) returns (google.protobuf.Empty);
     rpc ListCoins (google.protobuf.Empty) returns (stream Coin);
+    rpc UpVoteCoin (Coin) returns (google.protobuf.Empty);
 }
