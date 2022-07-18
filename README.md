@@ -33,7 +33,4 @@ go build -o bin/coin/server.exe ./coin/server
 go build -o bin/coin/client.exe ./coin/client
 ```
 
-<a name="makefile"></a>
-## Makefile
-
 References: https://www.udemy.com/course/grpc-golang/
