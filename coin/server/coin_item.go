@@ -7,9 +7,9 @@ import (
 
 type CoinItem struct {
 	ID       primitive.ObjectID `bson:"_id,omitempty"`
-	Initials string             `bson:"initials"`
-	Name     string             `bson:"name"`
-	Votes    int32              `bson:"votes"`
+	Initials string             `bson:"initials,omitempty"`
+	Name     string             `bson:"name,omitempty"`
+	Votes    int32              `bson:"votes,omitempty"`
 }
 
 func documentToCoin(data *CoinItem) *pb.Coin {
